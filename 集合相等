@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+	int j,l,p,n,k,m,i=0;
+	char a[20],b[20];
+	printf("请输入有几组数据:\n");
+	scanf("%d",&n);
+	while(i++<n)
+	{
+		scanf("%d %s %d %s",&k,&a,&m,&b);
+		p=0;
+		if(k==m)
+		{
+			for(j=0;j<k;j++)
+			{
+				for(l=0;l<m;l++)
+					if(a[j]==b[l]) {p++;break;}
+			}
+		}
+		if(p==k) printf("yes\n");
+			
+		else     printf("no\n");
+	}
+}
