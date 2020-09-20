@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main()
+{
+	printf("姓名：秦春旺\n学号：2020720001\n");
+	int i,k,a[500],n,j,sum=1;
+    srand((unsigned)time(NULL));
+	k=rand()%101;
+	printf("已随机生成如下%d个数\n",k);
+	for(i=0;i<k;i++)
+		a[i]=rand()%501;
+	for(i=0;i<k;i++)
+	{
+		printf("%d\t",a[i]);
+		if(sum%10==0) printf("\n");
+		sum++;
+	}
+	printf("\n\n\n");
+	printf("经检测，已删除重复数!\n");
+	for(i=0;i<k;i++)
+	{
+		for(j=i+1;j<k;j++)
+			if(a[j]==a[i])
+			{
+				for(n=j+1;n<k;n++)
+					a[n-1]=a[n];
+				k--;
+			}
+	}
+	printf("现在一共有%d个随机数。\n",k);
+	sum=1;
+	for(i=0;i<k;i++)
+	{
+		printf("%d\t",a[i]);
+		if(sum%10==0) printf("\n");
+		sum++;
+	}
+	 printf("\n");
+} 
