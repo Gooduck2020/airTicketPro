@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+	int sum,i,j,k,m;
+	char a[100],b[100];
+	scanf ("%d",&k);
+	getchar();                      //捕捉空格
+		for (i=0;i<k;i++)
+		{
+			scanf("%c",&a[i]);      //输入一个字母，捕捉一个空格
+			getchar();
+		}
+		scanf("%d",&m);
+		getchar();
+		for(i=0;i<m;i++)
+		{
+			scanf("%c",&b[i]);
+			getchar();
+		}
+		sum=m*k;
+		printf("%d\n",sum);
+		for(i=0;i<k;i++)
+			for(j=0;j<m;j++)
+				printf("<%c,%c>\n",a[i],b[j]);	
+	
+}
