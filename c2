@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+int a;
+printf("请输入学号,姓名");
+scanf("%d,%c",&a);
+printf("输入的学号:%d，姓名：秦春旺",a);
+}
